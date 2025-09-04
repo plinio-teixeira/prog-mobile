@@ -25,7 +25,7 @@ void main(){
     
 
 // AULA DE CONDIÇÃO IF 
-import 'dart:io';
+/* import 'dart:io';
     void main (){
         int idade = 18;
         // if(idade >= 18)
@@ -41,4 +41,24 @@ import 'dart:io';
         }
         
         print('pode entrar na balada');
+    } */
+    import 'dart:io';
+    void main (){
+        int renda = 1400;
+        if ( renda >1400 )
+        {
+            print('varejo');
+        }
+        else if (renda > 5000)
+        {
+            print('vangogh')
+        }
+        else if (renda > 30000)
+        {
+            print('select')
+        }
+        else (renda >= 60000)
+        {
+            print('exclusive')
+        }
     }
