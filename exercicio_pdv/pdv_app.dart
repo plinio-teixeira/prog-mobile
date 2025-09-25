@@ -7,8 +7,8 @@ class PDVApp {
   CarrinhoCompra carrinho = CarrinhoCompra();
 
   void iniciar() {
-    print('\n== SISTEMA DE PDV\N');
-    print('Bem-vindo ao sistema!');
+    print('\n== SISTEMA DE PDV');
+    print('\nBem-vindo ao sistema!');
 
     bool continuar = true;
   
@@ -50,5 +50,24 @@ class PDVApp {
                 }
 
             }
-    } 
+        } 
+
+        int quantidade = 0;
+        bool quantidadeValida = true;
+
+        while(!quantidadeValida){
+            print('\nQuantidade:');
+            String input = stdin.readLineSync() ?? '0';
+            quantidade = int.parse(input);
+            if(quantidade <= 0){
+                print('\nQuantidade deve ser maior que zero.');
+            } else {
+                quantidadeValida = true;
+            }
+        }
+
+        Produto produto = Produto(nome, valorUnitario);
+        return ItemCompra( produto,  quantidade);
+
+    }
 }
