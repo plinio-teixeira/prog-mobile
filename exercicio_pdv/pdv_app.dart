@@ -1,4 +1,3 @@
-import 'dart.io';
 import 'produto.dart';
 import 'item_compra.dart';
 import 'carrinho_compra.dart';
@@ -14,7 +13,7 @@ class PDVApp {
   
         while (continuar) {
         print('Deseja adicionar um produto ao carrinho? (S/N)');
-            String resposta = stdin.readLineSync()?.toUpperCase() ?? 'N'
+            String resposta = stdin.readLineSync()?.toUpperCase() ?? 'N';
         
             if (resposta == 'S'){
                 ItemCompra item = lerDadosCompra();
@@ -71,7 +70,7 @@ class PDVApp {
 
     }
 
-    void exibirResultado{
+    void exibirResultadoCompra(){
         double total = carrinho.calcularTotal();
         double desconto = carrinho.calcularDesconto();
         double valorFinal = carrinho.calcularValorFinal();
@@ -94,4 +93,7 @@ class PDVApp {
         print('\nvalor final: R\$ ${valorFinal.toStringAsFixed(2)}');
         print('\nObrigado por usar o sistema PDV.');
     }
+
+
+
 }

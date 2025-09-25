@@ -3,12 +3,12 @@ void main(){
 }
 
 class Produto {
-    string nome;
+    String nome;
     double valorUnitario; 
 
     Produto (this.nome, this.valorUnitario);
     @override 
-    string toString(){
+    String toString(){
         return'Produto: $nome - valor: R\$ ${valorUnitario.toStringAsFixed(2)}';
     }
 }
